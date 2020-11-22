@@ -1,6 +1,6 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAMES HERE"
+title: "airbnb_in_depth_research"
+author: "Zhiyi Chen & Zhuo Zhuo"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
