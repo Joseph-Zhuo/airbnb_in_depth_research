@@ -1,9 +1,8 @@
 --- 
-title: "airbnb_in_depth_research"
-author: "Zhiyi Chen & Zhuo Zhuo"
+title: "Airbnb"
+author: "Zhiyi Chen and Zhuo Zhuo"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
 # Introduction
-
