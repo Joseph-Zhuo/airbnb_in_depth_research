@@ -22,7 +22,7 @@ library(lubridate)
 
 ```{r}
 ## data loaded
-airbnb_ny <- read_excel("C:/Users/zhiyi/OneDrive/Desktop/Columbia2020/Fall2020/STAT 5702 Exploratory data analysis/Final project/data/airbnb_ny.xlsx")
+airbnb_ny <- read_excel("./resource/airbnb_ny.xlsx")
 ```
 
 ```{r}
