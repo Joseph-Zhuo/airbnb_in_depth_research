@@ -1,0 +1,190 @@
+host_since,neighbourhood_group,room_type,count
+2008,Brooklyn,Entire home/apt,6
+2008,Brooklyn,Private room,7
+2008,Brooklyn,Shared room,2
+2008,Manhattan,Entire home/apt,3
+2008,Manhattan,Private room,4
+2008,Queens,Entire home/apt,2
+2009,Bronx,Entire home/apt,1
+2009,Brooklyn,Entire home/apt,96
+2009,Brooklyn,Private room,41
+2009,Brooklyn,Shared room,1
+2009,Manhattan,Entire home/apt,55
+2009,Manhattan,Private room,42
+2009,Manhattan,Shared room,2
+2009,Queens,Entire home/apt,5
+2009,Queens,Private room,9
+2009,Staten Island,Entire home/apt,1
+2009,Staten Island,Private room,2
+2010,Bronx,Entire home/apt,11
+2010,Bronx,Private room,13
+2010,Bronx,Shared room,1
+2010,Brooklyn,Entire home/apt,265
+2010,Brooklyn,Private room,158
+2010,Brooklyn,Shared room,4
+2010,Manhattan,Entire home/apt,216
+2010,Manhattan,Private room,100
+2010,Manhattan,Shared room,4
+2010,Queens,Entire home/apt,28
+2010,Queens,Private room,15
+2010,Staten Island,Entire home/apt,3
+2010,Staten Island,Private room,1
+2011,Bronx,Entire home/apt,10
+2011,Bronx,Private room,13
+2011,Brooklyn,Entire home/apt,770
+2011,Brooklyn,Hotel room,4
+2011,Brooklyn,Private room,438
+2011,Brooklyn,Shared room,3
+2011,Manhattan,Entire home/apt,617
+2011,Manhattan,Hotel room,1
+2011,Manhattan,Private room,268
+2011,Manhattan,Shared room,9
+2011,Queens,Entire home/apt,49
+2011,Queens,Private room,59
+2011,Queens,Shared room,3
+2011,Staten Island,Entire home/apt,6
+2011,Staten Island,Private room,4
+2012,Bronx,Entire home/apt,18
+2012,Bronx,Private room,22
+2012,Brooklyn,Entire home/apt,1131
+2012,Brooklyn,Private room,820
+2012,Brooklyn,Shared room,15
+2012,Manhattan,Entire home/apt,1133
+2012,Manhattan,Hotel room,3
+2012,Manhattan,Private room,506
+2012,Manhattan,Shared room,16
+2012,Queens,Entire home/apt,115
+2012,Queens,Private room,142
+2012,Queens,Shared room,5
+2012,Staten Island,Entire home/apt,9
+2012,Staten Island,Private room,11
+2013,Bronx,Entire home/apt,21
+2013,Bronx,Private room,35
+2013,Bronx,Shared room,2
+2013,Brooklyn,Entire home/apt,1276
+2013,Brooklyn,Hotel room,1
+2013,Brooklyn,Private room,975
+2013,Brooklyn,Shared room,31
+2013,Manhattan,Entire home/apt,1473
+2013,Manhattan,Hotel room,1
+2013,Manhattan,Private room,777
+2013,Manhattan,Shared room,39
+2013,Queens,Entire home/apt,168
+2013,Queens,Private room,179
+2013,Queens,Shared room,5
+2013,Staten Island,Entire home/apt,8
+2013,Staten Island,Private room,4
+2013,Staten Island,Shared room,1
+2014,Bronx,Entire home/apt,45
+2014,Bronx,Private room,60
+2014,Bronx,Shared room,3
+2014,Brooklyn,Entire home/apt,1361
+2014,Brooklyn,Private room,1391
+2014,Brooklyn,Shared room,19
+2014,Manhattan,Entire home/apt,1851
+2014,Manhattan,Hotel room,11
+2014,Manhattan,Private room,1093
+2014,Manhattan,Shared room,46
+2014,Queens,Entire home/apt,249
+2014,Queens,Private room,337
+2014,Queens,Shared room,13
+2014,Staten Island,Entire home/apt,15
+2014,Staten Island,Private room,12
+2015,Bronx,Entire home/apt,34
+2015,Bronx,Private room,58
+2015,Bronx,Shared room,8
+2015,Brooklyn,Entire home/apt,1237
+2015,Brooklyn,Hotel room,4
+2015,Brooklyn,Private room,1502
+2015,Brooklyn,Shared room,57
+2015,Manhattan,Entire home/apt,1902
+2015,Manhattan,Hotel room,2
+2015,Manhattan,Private room,1229
+2015,Manhattan,Shared room,78
+2015,Queens,Entire home/apt,270
+2015,Queens,Hotel room,1
+2015,Queens,Private room,440
+2015,Queens,Shared room,34
+2015,Staten Island,Entire home/apt,18
+2015,Staten Island,Private room,14
+2015,Staten Island,Shared room,1
+2016,Bronx,Entire home/apt,54
+2016,Bronx,Private room,100
+2016,Bronx,Shared room,4
+2016,Brooklyn,Entire home/apt,864
+2016,Brooklyn,Private room,1156
+2016,Brooklyn,Shared room,45
+2016,Manhattan,Entire home/apt,1579
+2016,Manhattan,Hotel room,6
+2016,Manhattan,Private room,967
+2016,Manhattan,Shared room,44
+2016,Queens,Entire home/apt,295
+2016,Queens,Private room,444
+2016,Queens,Shared room,19
+2016,Staten Island,Entire home/apt,28
+2016,Staten Island,Private room,24
+2017,Bronx,Entire home/apt,64
+2017,Bronx,Private room,117
+2017,Bronx,Shared room,6
+2017,Brooklyn,Entire home/apt,546
+2017,Brooklyn,Hotel room,14
+2017,Brooklyn,Private room,706
+2017,Brooklyn,Shared room,33
+2017,Manhattan,Entire home/apt,811
+2017,Manhattan,Hotel room,27
+2017,Manhattan,Private room,624
+2017,Manhattan,Shared room,27
+2017,Queens,Entire home/apt,246
+2017,Queens,Private room,501
+2017,Queens,Shared room,21
+2017,Staten Island,Entire home/apt,23
+2017,Staten Island,Private room,22
+2017,Staten Island,Shared room,1
+2018,Bronx,Entire home/apt,53
+2018,Bronx,Private room,109
+2018,Bronx,Shared room,18
+2018,Brooklyn,Entire home/apt,419
+2018,Brooklyn,Private room,667
+2018,Brooklyn,Shared room,25
+2018,Manhattan,Entire home/apt,745
+2018,Manhattan,Hotel room,54
+2018,Manhattan,Private room,505
+2018,Manhattan,Shared room,31
+2018,Queens,Entire home/apt,196
+2018,Queens,Private room,476
+2018,Queens,Shared room,38
+2018,Staten Island,Entire home/apt,21
+2018,Staten Island,Private room,23
+2018,Staten Island,Shared room,1
+2019,Bronx,Entire home/apt,68
+2019,Bronx,Private room,125
+2019,Bronx,Shared room,4
+2019,Brooklyn,Entire home/apt,529
+2019,Brooklyn,Hotel room,2
+2019,Brooklyn,Private room,625
+2019,Brooklyn,Shared room,57
+2019,Manhattan,Entire home/apt,819
+2019,Manhattan,Hotel room,238
+2019,Manhattan,Private room,962
+2019,Manhattan,Shared room,54
+2019,Queens,Entire home/apt,241
+2019,Queens,Hotel room,9
+2019,Queens,Private room,491
+2019,Queens,Shared room,27
+2019,Staten Island,Entire home/apt,23
+2019,Staten Island,Private room,20
+2020,Bronx,Entire home/apt,23
+2020,Bronx,Private room,48
+2020,Bronx,Shared room,1
+2020,Brooklyn,Entire home/apt,159
+2020,Brooklyn,Private room,253
+2020,Brooklyn,Shared room,21
+2020,Manhattan,Entire home/apt,331
+2020,Manhattan,Hotel room,4
+2020,Manhattan,Private room,256
+2020,Manhattan,Shared room,15
+2020,Queens,Entire home/apt,71
+2020,Queens,Private room,187
+2020,Queens,Shared room,7
+2020,Staten Island,Entire home/apt,10
+2020,Staten Island,Private room,2
