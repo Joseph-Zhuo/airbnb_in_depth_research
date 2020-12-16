@@ -1,23 +1,23 @@
-# Results
+# Results to the Research Questions
 
 ```{r setup, include=FALSE}
  # keep this chunk in your .Rmd file
  knitr::opts_chunk$set(warning = FALSE, message = FALSE)
 ```
 
-## Data processing
-
-Since the original data are very dirty, we processed it first directly in excel and loaded it to R software for further processing.
 
 ```{r,warning=FALSE}
 ## packages loaded
 library(readxl)
 library(ggplot2)
 library(tidyverse)
+library(treemapify)
 library(mi)
 library(GGally)
 library(gridExtra)
 library(lubridate)
+library(ggalluvial)
+library(scales)
 ```
 
 ```{r}
@@ -30,26 +30,16 @@ airbnb_ny <- read_excel("./resource/airbnb_ny.xlsx")
 airbnb_new <- airbnb_ny %>% mutate(id = as.factor(id),host_id = as.factor(host_id))
 ```
 
-```{r}
-## missing value situation
-colSums(is.na(airbnb_new)) %>% sort(decreasing = TRUE)
-```
 
-The brief understanding of the data is that there are 44187 airbnb houses collected in this dataset and 26 features are scraped which can be gathered into three main feature group, ie, house information, host information, evaluation information
+## Airbnb Development in New York City Over the Years 
 
-House information (10 features): id, host_since, neighbourhood_group, latitude, longitude, room_type, accomodates, price, availability_30, availability_365
-
-Host information (6 features): host_id, host_response_rate, host_acceptance_rate, host_listings_count, host_has_profile_pic, host_identity_verified.
-
-Evaluation information (10 features): number_of_review, last_review, review_scores_rating, review_scores_accuracy, review_scores_cleanliness, review_scores_checkin, review_scores_communication, review_scores_location, review_scores_value, review_per_month
-
-## How does airbnb in New York develop these years 
 
 First, we have a status analysis by a stack bar chart, from which we can have several observations.
 
-1. Manhattan and Brooklyn are the main regions where airbnb house are located, Bronx and Staten Island have pretty low number of airbnb houses.
+1. Manhattan and Brooklyn are the main regions where Airbnb's residences are located, Bronx and Staten Island have a pretty low number of Airbnb properties.
 
-2. Entire home/apt and Private room are the main type of room, only Manhattan has "Hotel room" room type.
+
+2. `Entire home/apt` and `Private room` are the main type of rooms, only Manhattan has the `Hotel room` as a category. 
 
 ```{r}
 ## create new dataset for analysis
@@ -58,13 +48,14 @@ airbnb_1 <- airbnb_new %>% mutate(host_since = year(host_since))
 ## total airbnb distribution by neighbourhood group
 
 (total_dist <- ggplot(airbnb_1, aes(y = fct_rev(fct_infreq(neighbourhood_group)))) + geom_bar(aes(fill = room_type)) +
-  labs(x = "Number of airbnb house", y = "Neighbourhood group", title = "Total distribution of airbnb by neighbourhood") +
+  labs(x = "Number of Airbnb House", y = "Boroughs of NYC", title = "Total distribution of airbnb by borough") +
   theme(plot.title = element_text(hjust = 0.5)))
   
 
 ```
 
-Besides status analysis, we are more curious about the development of airbnb house in New York with year. We plot the number of new hosted airbnb house by year to observe the growth.
+Besides status analysis, we are more curious about the development of Airbnb houses in New York within the past 13 years. We plot the number of new hosted Airbnb properties by year to observe the growth.
+
 
 ```{r,fig.height= 8, fig.width = 10}
 ## increment airbnb house number by year
@@ -75,13 +66,12 @@ Besides status analysis, we are more curious about the development of airbnb hou
    theme(axis.text.x = element_text(angle = 90)))
 ```
 
-From this graph, it is very clear to discover some growth pattern of airbnb in New York
+From the graph above, it is very clear to learn some growth pattern of Airbnb in New York City:
 
-1. From 2008 to 2015, the increment number was increasing, especially in Brooklyn and Mahanttan. From 2016 to 2019, the incremnt number has sign to go down and keeps stable in all. However, in 2020, the increment decreased rapidly and even there was no increment number in Staten Island, no doubtly which was the consequence of Covid-19.
+1. From 2008 to 2015, the increment number was increasing, especially in Brooklyn and Manhattan. This shows that Airbnb was growing radially in these years. From 2016 to 2019, the increment number had a sign to go down and remained stable after 2017. Nevertheless, in 2020, the increment decreased rapidly and even there was no increment number in Staten Island, no doubt which was the consequence of Covid-19.
 
-2. Entire home/apt and private room are the majority of increment. Hotel room began to appear in 2018 but only at Mahanttan, the reason we can guess is that some hotels foresighted the potential of airbnb and put a part of room source on airbnb to attract more customers. It can be seen as a phenomenon of airbnb's high growth in New York.
+2. `Entire home/apt` and `private room` are the majority of increment. `Hotel room` began to appear in 2018 but only in Manhattan, the reason we can guess is that some hotels foresighted the potential of Airbnb and put a part of room source on Airbnb to advertise so that they could attract more customers. It can be seen as a phenomenon of Airbnb's high growth.
 
-The display of this observation can be shown in geography graph
 
 ```{r}
 ## new york map boundary latitude and longitude
@@ -95,16 +85,43 @@ ggplot(airbnb_1, aes(x=longitude, y=latitude)) +
   geom_point(size=0.06, color="seagreen") +
   scale_x_continuous(limits=c(min_long, max_long)) +
   scale_y_continuous(limits=c(min_lat, max_lat)) +
-  ggtitle("Map of airbnb in New York city") + theme(plot.title = element_text(hjust = 0.5))
+  ggtitle("Map of Airbnb Properties in New York City") + theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+As we can see from the geography graph,especially the shape of Manhatten, the map closely resembles a real map of NYC. We interpret this as the success of Airbnb as it illustrates how dense the Airbnb properties are. We can claim that almost every corner in Manhatten has at least one Airbnb listed property since we obviously can see the shape of Central Park and the shape of island. 
+
+
+
+## Features Influence Airbnb Properties' Review Scores 
+
+It is widely acknowledged that the review score is a remarkable judgment standard for customers, just like the bad comments which host will try their best to avoid. Sometimes even if one house's price is lower than another one, its lowest score will make customers have a decision to choose a more expensive one. It is necessary for us to find which feature is the one host should pay much attention to for getting a high review score for their listing(s).
+
+Overview of Airbnb reviews:
+From the treemap graph below, we can see that Brooklyn has the most number of reviews (darker color) although Manhattan has the most number of total Airbnb properties listed online (Larger area). We interpret this as properties in Brooklyn are more likely to have budget-friendly pricing. Thus, more tourists choose to stay in Brooklyn instead of Manhattan. 
+It is also worth mention that most reviews that we visualize in this research are from either from Manhattan or Brooklyn as it is shown in the treemap
+
+```{r}
+##treemap graph
+count<-as.matrix(table(airbnb_new$neighbourhood_group))
+airbnb_new$neighbourhood_group<-factor(airbnb_new$neighbourhood_group)
+reviewer_count<-as.matrix(tapply(airbnb_new$number_of_reviews, airbnb_new$neighbourhood_group, sum))
+draw_data<-data.frame(area=rownames(count),number_of_id=count,reviewer_count)
+rownames(draw_data)<-NULL
+ggplot(draw_data, aes(area = number_of_id,fill=reviewer_count, label = area)) +
+  geom_treemap() +
+  geom_treemap_text(fontface = "italic", colour = "black", place = "center",alpha=.7)+
+  scale_fill_distiller(palette="Greens",trans = "reverse", name = "Number of reviews", labels = comma)+
+  xlab("(Areas show the total number of listings)")+
+  ggtitle("Treemap of Airbnb reviews in NYC")+theme(plot.title = element_text(hjust = 0.5))
+  
+  
 
 ```
 
 
-## Which features influence airbnb houses' scores most
+Next, we want to understand the distribution of `review_scores`, we find most scores are very high and even the mean score is above 90. However, there are a few small peaks under the mean level. This situation is within our expectation as most customers will give out high score ratings.
 
-It is widely acknowledged that score is the remarkable judgement criteria for customers, just like the bad comments which host will try their best to avoid. Sometimes even if one house's price is lower than another one, its very low score will make customers have a decision to choose the more expensive one. It is necessary for us to find which feature is the one host should pay much attention to for getting high review score.
-
-First we want to understand the distribution of scores, we find most scores are very high and even the mean score is above 90. However, there are few small peak under the mean level. This situation is within our expectation that high score rating dominates.
 
 ```{r, warning = FALSE}
 ## The distribution of the scores
@@ -119,8 +136,34 @@ p <- ggplot(airbnb_new,aes(x=review_scores_rating)) + geom_density(fill = 'light
 #mean(airbnb_new$review_scores_rating, na.rm = TRUE)
 ```
 
-First, we select few features to visualize the relationship between them and review scores rating respectively. Price is the first one into our consideration.
+We selected a few features to visualize the relationship between them and review scores rating respectively. 
+`Price` is the first one into our consideration: 
 
+```{r}
+##mosaic plot
+airbnb_new$price_level = "Expensive"
+airbnb_new$price_level[which(airbnb_new$price < 160)] = "Medium"
+airbnb_new$price_level[which(airbnb_new$price < 65)] = "Budget"
+
+
+
+airbnb_new$price_level <- as.factor(airbnb_new$price_level)
+airbnb_new$price_level<- factor(airbnb_new$price_level, levels = c("Budget","Medium","Expensive"))
+airbnb_new$overall_review = "Good"
+airbnb_new$overall_review[which(airbnb_new$review_scores_rating == 100)] = "Excellent"
+airbnb_new$overall_review[which(airbnb_new$review_scores_rating < 92)] = "Poor"
+airbnb_new$overall_review <- as.factor(airbnb_new$overall_review)
+
+
+colors <- tibble('Poor' = "#8461c1", 'Good' = "#5e3c99",'Excellent'="#3c2662")
+##Graph
+mosaic(overall_review ~ price_level, direction = "v", airbnb_new,highlighting_fill = c(colors$Poor, colors$Good,colors$Excellent),
+       main = "Mosaic plot of overall review scores and price")
+```
+
+As ew can see from the mosaic plot, more expensive properties tend to have slightly more excellent reviews and less poor reviews. However, we do not think the relationship is very significant. Furthermore, we can observe that most listings on Airbnb have reasonable prices(below XXX above XXX) and their review scores are all good( from 92 - 100).
+
+We ploted a scatter plot for further statistical analysis. 
 ```{r,warning=FALSE,message= FALSE}
 (score_price <- ggplot(data = airbnb_new) + 
   geom_point(aes(x = price, y = review_scores_rating), alpha = 0.3) + 
@@ -128,9 +171,21 @@ First, we select few features to visualize the relationship between them and rev
   labs(x = "price", y = "review rating", title = "The relationship between rating and price") + theme_gray())
 ```
 
-We can see there is almost no impact on review rating from price since the smooth line is just near a vertical line with high intercept. However, an oberservation is that when price goes up, the number of low rating decreases correspondingly.
+We saw that there is almost no impact on `review` rating from `price` since the smooth line is just near a vertical line with high intercept. However, an oberservation is that when price goes up, the number of low rating decreases correspondingly.
 
-Next, we want to see whether the number of review has relationship with review score rating. Here review per month is not our choice since it has no ability to reveal the operation time of airbnb house and will have positive bias for the ones just on service.
+
+
+Secondly, we want to see if the property types of Airbnb listings affect the overall review scores. 
+
+```{r}
+mosaic(overall_review ~ room_type, direction = c("v"), airbnb_new,highlighting_fill = c(colors$Poor, colors$Good,colors$Excellent),
+       main = "mosaic plot of room type and review")
+```
+
+This mosaic shows that Airbnb's listings posted online mostly consist of `entire home/apt` and `private room`. However, we still cannot observe any significant relationship between these two features. 
+
+
+Thirdly, we want to see whether the number of reviews has relationship with review score rating. Here review per month is not our choice since it has no ability to reveal the operation time of Airbnb's house and will have positive bias for the ones just on service.
 
 ```{r, warning=FALSE, message= FALSE}
 (number_score <- ggplot(data = airbnb_new) + 
@@ -139,35 +194,35 @@ Next, we want to see whether the number of review has relationship with review s
   labs(x = "number of review", y = "review rating", title = "The distribution of number of review and review score") + theme_gray())
 ```
 
-The trend is the same as previous graph that no clear relationship appears whereas the houses with high number of review definitely receive high ratings. From these two observations, when customers is choosing airbnb house in New York, the ones with high price and high number of review are more likely to be good choice. Of course, it is almost within our expectation and imagination, but the only restriction is whether customer can afford the price. Therefore, can we find other feature influencing review rating? For the continuous features, correlogram is the most straight way to display the relationships.
+The trend is the same as previous graph that no clear relationship appears whereas the houses with high number of review definitely receive high ratings. From these observations, when customers is choosing airbnb house in New York City, the ones with high price and high number of review are more likely to be good choice. The difference in room types does not influence too much on customers' exprenece. Of course, it is almost within our expectation and imagination, but the only restriction is whether customer can afford the price. Therefore, can we find other feature influencing review rating? For the continuous features, a correlogram is the most straight way to display the relationships.
 
 The continous variables we choose are shown below:
 
-HOUSE information: price, availability_365
+HOUSE information: `price`, `availability_365`
 
-HOST information: host_response_rate, host_acceptance_rate, host_listings_count
+HOST information: `host_response_rate`, `host_acceptance_rate`, `host_listings_count`
 
-EVALUATION information: review_scores_rating
+EVALUATION information: `review_scores_rating`
 
 ```{r, warning = FALSE}
-feature_cor <- airbnb_new %>% select(price, availability_365,host_response_rate, host_acceptance_rate, host_listings_count, review_scores_rating)
+feature_cor <- airbnb_new %>% dplyr::select(price, availability_365,host_response_rate, host_acceptance_rate, host_listings_count, review_scores_rating)
 
 ggpairs(feature_cor,title="correlogram with ggpairs()", progress = FALSE)
 ```
 
-Unfortunately, all continuous variables have low correlation values. Then we turn to the discrete variables: neighbourhood_group, host_identity_verified, host_has_profile_pic
+Unfortunately, all the continuous variables have low correlation values. Then we turn to the discrete variables, namely: `neighbourhood_group`, `host_identity_verified`, `host_has_profile_pic`
 
-The first one is neighbourhood_group
+The first one is neighbourhood_group: 
 
 ```{r, warning = FALSE}
 ## neighbourhood_group density distribution
 neig_density <- ggplot(airbnb_new,aes(x=review_scores_rating)) + 
    geom_density(fill = 'lightblue', alpha = 0.5,size = 1.3) + 
-   labs(x = "review scores rating", title = "density by neighbourhood group") +
+   labs(x = "review scores rating", title = "Density by neighbourhood group") +
    facet_grid(neighbourhood_group~.)
 
 neig_box <- ggplot(airbnb_new) + geom_boxplot(aes(x = fct_rev(factor(neighbourhood_group)), y = review_scores_rating), size = 1.3) +
-  labs(x = "neighbour group", y = "review scores rating", title = "boxplot by neighbourhood group") + coord_flip()
+  labs(x = "neighbour group", y = "review scores rating", title = "Boxplot by neighbourhood group") + coord_flip()
 
 grid.arrange(neig_density, neig_box, ncol = 2)
 
