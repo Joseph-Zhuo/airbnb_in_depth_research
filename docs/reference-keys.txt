@@ -2,7 +2,8 @@ introduction
 data-sources
 inside-airbnb
 data-transformation
-the-columns-we-chose
+the-columns-we-chose-from-listings.csv
+the-year_bar-dataset
 missing-values
 results-to-the-research-questions
 airbnb-development-in-new-york-city-over-the-years
@@ -11,5 +12,7 @@ how-does-the-covid-19-influence-airbnb
 interactive-component
 conclusion
 what-we-found
-the-columns-we-chose-from-listings.csv
-the-year_bar-dataset
+airbnb-in-new-york-grows-fast-but-almost-comes-to-high-saturation.
+host-information-is-important
+covid-19-is-a-disaster-but-hope-is-still-there
+further-discussion

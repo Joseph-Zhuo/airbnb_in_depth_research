@@ -24,7 +24,7 @@
 <meta name="author" content="Zhiyi Chen and Zhuo Zhuo" />
 
 
-<meta name="date" content="2020-12-16" />
+<meta name="date" content="2020-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="interactive-component.html"/>
-<link rel="next" href="what-we-found.html"/>
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -77,17 +77,24 @@
 <li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#inside-airbnb"><i class="fa fa-check"></i><b>2.1</b> Inside Airbnb</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a><ul>
-<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#the-columns-we-chose"><i class="fa fa-check"></i><b>3.1</b> The Columns we chose</a></li>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#the-columns-we-chose-from-listings.csv"><i class="fa fa-check"></i><b>3.1</b> The Columns We Chose From Listings.csv</a></li>
+<li class="chapter" data-level="3.2" data-path="data-transformation.html"><a href="data-transformation.html#the-year_bar-dataset"><i class="fa fa-check"></i><b>3.2</b> The year_bar Dataset</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
 <li class="chapter" data-level="5" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html"><i class="fa fa-check"></i><b>5</b> Results to the Research Questions</a><ul>
 <li class="chapter" data-level="5.1" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#airbnb-development-in-new-york-city-over-the-years"><i class="fa fa-check"></i><b>5.1</b> Airbnb Development in New York City Over the Years</a></li>
 <li class="chapter" data-level="5.2" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#features-influence-airbnb-properties-review-scores"><i class="fa fa-check"></i><b>5.2</b> Features Influence Airbnb Properties’ Review Scores</a></li>
-<li class="chapter" data-level="5.3" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#how-does-the-covid-19-influence-airbnb"><i class="fa fa-check"></i><b>5.3</b> How does the covid-19 influence airbnb</a></li>
+<li class="chapter" data-level="5.3" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#how-does-the-covid-19-influence-airbnb"><i class="fa fa-check"></i><b>5.3</b> How does the Covid-19 influence airbnb</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
-<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
-<li class="chapter" data-level="8" data-path="what-we-found.html"><a href="what-we-found.html"><i class="fa fa-check"></i><b>8</b> What we found…</a></li>
+<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a><ul>
+<li class="chapter" data-level="7.1" data-path="conclusion.html"><a href="conclusion.html#what-we-found"><i class="fa fa-check"></i><b>7.1</b> What we found…</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="conclusion.html"><a href="conclusion.html#airbnb-in-new-york-grows-fast-but-almost-comes-to-high-saturation."><i class="fa fa-check"></i><b>7.1.1</b> Airbnb in New York grows fast but almost comes to high saturation.</a></li>
+<li class="chapter" data-level="7.1.2" data-path="conclusion.html"><a href="conclusion.html#host-information-is-important"><i class="fa fa-check"></i><b>7.1.2</b> Host information is important</a></li>
+<li class="chapter" data-level="7.1.3" data-path="conclusion.html"><a href="conclusion.html#covid-19-is-a-disaster-but-hope-is-still-there"><i class="fa fa-check"></i><b>7.1.3</b> Covid-19 is a disaster but hope is still there</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="conclusion.html"><a href="conclusion.html#further-discussion"><i class="fa fa-check"></i><b>7.2</b> Further discussion</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -110,14 +117,36 @@
             <section class="normal" id="section-">
 <div id="conclusion" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> Conclusion</h1>
+<div id="what-we-found" class="section level2">
+<h2><span class="header-section-number">7.1</span> What we found…</h2>
+<p>How was airbnb develop, how does different features influence airbnb, how does the Covid-19 have impact on airbnb. The <code>3Hows</code> are the main research topic we are concentrated on. We are willing to find patterns from airbnb development and give some proper suggestions.</p>
+<div id="airbnb-in-new-york-grows-fast-but-almost-comes-to-high-saturation." class="section level3">
+<h3><span class="header-section-number">7.1.1</span> Airbnb in New York grows fast but almost comes to high saturation.</h3>
+<p>Airbnb was found in 2008, from then on, the number of it in New York is increasing fast. From the chart in the <code>result</code> part, it is clear to see the patterns but the growth rate slowed down in recent years. With our expectation, the growth rate will continue to decrease and unfortunately, the covid-19 is going to cause worse condition. High saturation is only aimed for the whole number of airbnb house in New York, there could be more opportunites for growth space. <code>Entie house/apt</code> and <code>private room</code> are the main types of airbnb, what about increase the proportion of <code>hotel room</code> and <code>shared room</code>. All hotels and Airbnbs are facing the same difficulty situation under Covid-19. Is it possible to create new commercial mode to contribute to the cooperation of them. All in all, taking minority room type into consideration can be a good way for future development.</p>
+</div>
+<div id="host-information-is-important" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> Host information is important</h3>
+<p>From our analysis between review score and other features, we can see there are few features having high correlation with review scores. However, <code>host_has_profile_pic</code> is highly related to the score, which is beyond our expectation. This observation is likely to deliver the information that customers care more about the security since <code>host_has_profile_pic</code> tells it is a real host and we can search for his/her information online. For hosts, we suggest them to complete personal information which really matters.</p>
+</div>
+<div id="covid-19-is-a-disaster-but-hope-is-still-there" class="section level3">
+<h3><span class="header-section-number">7.1.3</span> Covid-19 is a disaster but hope is still there</h3>
+<p>Covid-19 not only causes much lower increment of airbnb house compared to previous years but also brought about much revenue lost due to large number of check-outs of customers. The situation is really bad whereas some points can be a way to recover a part of damage. <code>shared room</code> is the type influenced most due to covid-19. Could Airbnb create a strategy to reuse the idle shared room, for example, we can use shared room as “family house”.</p>
+</div>
+</div>
+<div id="further-discussion" class="section level2">
+<h2><span class="header-section-number">7.2</span> Further discussion</h2>
+<p>Airbnb started to be on market on 2020-12-11, the stock price is continuing to go well. We can consider it is a strategy for airbnb to fight with covid-19 and try to find a way out. With time going by, we can have the data during 2021-2022 which will be a good opportunity for us to justify whether this strategy works well.</p>
+<p>Moreover, the data we found does not contain all features of airbnb, missing features could be one of the reasons why we found very few features related to review scores. If we have more time, we could webscrape by ourselves to obtain the features as much as possible.</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="interactive-component.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="what-we-found.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="interactive-component.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

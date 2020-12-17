@@ -1,13 +1,7 @@
 # Missing values
 
 
-We plot a vis_miss heat graph to investigate the missing patterns in variables that involved in following data analysis.
-
-
-For missing row patterns, we observe that most of the rows don't have missing values. Majority of rows that with missing values only have missings in variable  .   
-
-
-For missing column patterns, we find that there are 8 columns having missing values. Variable ```transit``` has the highest number of missing values, with about 17% of the value missing. Since “transit” is an entry that needs to be manually entered by property owners, we think the laziness of some owners lead to the missing values in ```transit```. Other 7 variables of ```comments```, ```location_scores```(denoted as "locatin_scrs" in the plot), ```checkin_scores```(denoted as "checkin_scrs" in the plot), ```communication_scores```(denoted as "cmmnctn_scrs" in the plot), ```clean_scores```,```accuracy_scores```(denoted as "accuracy_scrs" in the plot)  and ```review_scores```(denoted as "rvw_scores" in the plot) only have missing values in very few rows hence their missing distribution are not reflected in the bar graph on the bottom.
+We plot a vis_miss heat graph to investigate the missing patterns in variables that involved in following analysis.
 
 
 ```{r,warning=FALSE}
@@ -37,6 +31,13 @@ gg_miss_var(airbnb_ny)
 ```
 
 
+For missing row patterns, we observe that most of the rows don't have missing values. For missing column patterns, we find that there are 12 columns having missing values. Variables `host_response_rate` and `host_acceptance_rate` have the highest number of missing values, with 52% and 38% of the value missing. We believe the large amount of missing values in these two is normal for this dataset because the hosts will not respond to all the requests and certainly will not accept all customers. According to our analysis, most hosts filter out about half of their requests via these two steps. Therefore, these two variables make sense to have a large number of missings. 
+Moreover, these two variables will not influence our research since we wi not use them in our further analysis.  
+
+Other 9 variables of  `last_review`, `review_scores_rating`,	`review_scores_accuracy`, `review_scores_cleanliness`,	`review_scores_checkin`,	`review_scores_communication`,	`review_scores_location`,	`review_scores_value`, and	`reviews_per_month`  all about the same amount of missing values ( around 25%), and they all related to the same attribute "reviews". Thus, they will not influence our analysis of the relationship among other factors and overall review scores. 
+
+
+The table below shows the exact number of missing values of all variables.
 ```{r}
 colSums(is.na(airbnb_ny)) %>%sort(decreasing =TRUE)
 ```
