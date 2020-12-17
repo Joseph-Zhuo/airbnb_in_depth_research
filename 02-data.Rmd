@@ -3,16 +3,23 @@
 ## Inside Airbnb
 
 
+System".[ ]https://insideairbnb
+
+>"
+Placeholder
+>placeholder."
+>--[Wiki Link]https://en.wikipedia.org/wiki.
+
+
+More about Inside Airbnb...
 
 
 
+1. Airbnb Listings data(about 48000 records) (listings.csv); 
 
+2. year_bar.csv
 
-
-
-
-
-
+Dataset 1 contains 106 variables, with slightly more categorical variables than numeric ones. Dataset 2 contains 6 variables and the most important one for analysis is the detailed comments. Since there are so many records in dataset 2, one issue appears to be that processing all of them would take a huge amount of computing time. Therefore, we need to do random sampling on the entire data. Another issue about our raw data is that there exists missing values in both datasets and including missing values of numeric variables in our analysis and exploration would result in calculation error. Therefore, we have to remove them under necessary conditions. In addition, there exists some listings with zero price which should not be included in our analysis, so we removed those data points. We also get rid of the listings with “availability_365” = 0, which means that these properties are not available now and there is no point for analyzing them.
 
 
 

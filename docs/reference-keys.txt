@@ -11,3 +11,5 @@ how-does-the-covid-19-influence-airbnb
 interactive-component
 conclusion
 what-we-found
+the-columns-we-chose-from-listings.csv
+the-year_bar-dataset
