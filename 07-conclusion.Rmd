@@ -1,5 +1,24 @@
 # Conclusion
 
+## What we found...
+
+How was airbnb develop, how does different features influence airbnb, how does the Covid-19 have impact on airbnb. The `3Hows` are the main research topic we are concentrated on. We are willing to find patterns from airbnb development and give some proper suggestions.
+
+### Airbnb in New York grows fast but almost comes to high saturation.
+
+Airbnb was found in 2008, from then on, the number of it in New York is increasing fast. From the chart in the `result` part, it is clear to see the patterns but the growth rate slowed down in recent years. With our expectation, the growth rate will continue to decrease and unfortunately, the covid-19 is going to cause worse condition. High saturation is only aimed for the whole number of airbnb house in New York, there could be more opportunites for growth space. `Entie house/apt` and `private room` are the main types of airbnb, what about increase the proportion of `hotel room` and `shared room`. All hotels and Airbnbs are facing the same difficulty situation under Covid-19. Is it possible to create new commercial mode to contribute to the cooperation of them. All in all, taking minority room type into consideration can be a good way for future development.
+
+### Host information is important
+
+From our analysis between review score and other features, we can see there are few features having high correlation with review scores. However, `host_has_profile_pic` is highly related to the score, which is beyond our expectation. This observation is likely to deliver the information that customers care more about the security since `host_has_profile_pic` tells it is a real host and we can search for his/her information online. For hosts, we suggest them to complete personal information which really matters.
+
+### Covid-19 is a disaster but hope is still there
+
+Covid-19 not only causes much lower increment of airbnb house compared to previous years but also brought about much revenue lost due to large number of check-outs of customers. The situation is really bad whereas some points can be a way to recover a part of damage. `shared room` is the type influenced most due to covid-19. Could Airbnb create a strategy to reuse the idle shared room, for example, we can use shared room as "family house". 
 
 
-# What we found...
+## Further discussion
+
+Airbnb started to be on market on 2020-12-11, the stock price is continuing to go well. We can consider it is a strategy for airbnb to fight with covid-19 and try to find a way out. With time going by, we can have the data during 2021-2022 which will be a good opportunity for us to justify whether this strategy works well. 
+
+Moreover, the data we found does not contain all features of airbnb, missing features could be one of the reasons why we found very few features related to review scores. If we have more time, we could webscrape by ourselves to obtain the features as much as possible.
