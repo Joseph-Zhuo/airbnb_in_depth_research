@@ -25,7 +25,7 @@ We choose the data compiled on Oct.24 in the New York Metropolitan area.
 
 Listings: The listings data showing 74 attributes for each of the listings. Some attributes we will use in the project are Price (continuous), Longitude (continuous), Latitude (continuous), Listing_type (categorical), neighborhood (categorical), and ratings (continuous). 
 
-The details of the data can be viewed[here](https://github.com/Joseph-Zhuo/airbnb_in_depth_research/tree/main/resource).
+The details of the data can be viewed [here](https://github.com/Joseph-Zhuo/airbnb_in_depth_research/tree/main/resource).
 
 *This repo was initially generated from a bookdown template available here: https://github.com/jtr13/EDAVtemplate.*	
 

@@ -75,6 +75,7 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a><ul>
 <li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#inside-airbnb"><i class="fa fa-check"></i><b>2.1</b> Inside Airbnb</a></li>
+<li class="chapter" data-level="2.2" data-path="data-sources.html"><a href="data-sources.html#what-we-chose"><i class="fa fa-check"></i><b>2.2</b> What We Chose</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a><ul>
 <li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#the-columns-we-chose-from-listings.csv"><i class="fa fa-check"></i><b>3.1</b> The Columns We Chose From Listings.csv</a></li>
@@ -124,30 +125,22 @@
 Moreover, these two variables will not influence our research since we wi not use them in our further analysis.</p>
 <p>Other 9 variables of <code>last_review</code>, <code>review_scores_rating</code>, <code>review_scores_accuracy</code>, <code>review_scores_cleanliness</code>, <code>review_scores_checkin</code>, <code>review_scores_communication</code>, <code>review_scores_location</code>, <code>review_scores_value</code>, and <code>reviews_per_month</code> all about the same amount of missing values ( around 25%), and they all related to the same attribute “reviews”. Thus, they will not influence our analysis of the relationship among other factors and overall review scores.</p>
 <p>The table below shows the exact number of missing values of all variables.</p>
-<pre><code>##          host_response_rate        host_acceptance_rate 
-##                       22892                       16754 
-##      review_scores_location         review_scores_value 
-##                       11484                       11483 
-##       review_scores_checkin      review_scores_accuracy 
-##                       11479                       11464 
-## review_scores_communication   review_scores_cleanliness 
-##                       11459                       11451 
-##        review_scores_rating                 last_review 
-##                       11432                       10394 
-##           reviews_per_month         host_listings_count 
-##                       10394                        5540 
-##                  host_since        host_has_profile_pic 
-##                          17                          17 
-##      host_identity_verified                          id 
-##                          17                           0 
-##                     host_id         neighbourhood_group 
-##                           0                           0 
-##                    latitude                   longitude 
-##                           0                           0 
-##                   room_type                accommodates 
-##                           0                           0 
-##                       price             availability_30 
-##                           0                           0 
+<pre><code>##          host_response_rate        host_acceptance_rate      review_scores_location 
+##                       22892                       16754                       11484 
+##         review_scores_value       review_scores_checkin      review_scores_accuracy 
+##                       11483                       11479                       11464 
+## review_scores_communication   review_scores_cleanliness        review_scores_rating 
+##                       11459                       11451                       11432 
+##                 last_review           reviews_per_month         host_listings_count 
+##                       10394                       10394                        5540 
+##                  host_since        host_has_profile_pic      host_identity_verified 
+##                          17                          17                          17 
+##                          id                     host_id         neighbourhood_group 
+##                           0                           0                           0 
+##                    latitude                   longitude                   room_type 
+##                           0                           0                           0 
+##                accommodates                       price             availability_30 
+##                           0                           0                           0 
 ##            availability_365           number_of_reviews 
 ##                           0                           0</code></pre>
 
