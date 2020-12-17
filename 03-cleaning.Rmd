@@ -1,43 +1,40 @@
 # Data transformation
 
-## The Columns we chose
+## The Columns We Chose From Listings.csv
 
-Since the original data are very dirty, we processed it first directly in excel and loaded it to R software for further processing.
+After we downloaded the CSV file, we processed it first directly in excel as it is a great way to look for every column we had. We chose to keep: `id`,`host_id`,`host_since`,`host_response_rate`,`host_acceptance_rate`,	`host_listings_count`,	`host_has_profile_pic`,	`host_identity_verified`,	`neighbourhood_group`, `latitude`,	`longitude`,	`room_type`,	`accommodates`,	`price`,	`availability_30`,	`availability_365`,	`number_of_reviews`,	`last_review`,	`review_scores_rating`,	`review_scores_accuracy`,	`review_scores_cleanliness`,	`review_scores_checkin`,	`review_scores_communication`,	`review_scores_location`,	`review_scores_value`, and	`reviews_per_month` as these variables might be meaningful for our further analysis.
+
+
+The brief understanding of the data is that there are 44187 Airbnb properties collected in this dataset and 26 features that we chose can be grouped into three feature groups: property information, host information, review information
+
+Property information (10 features): `id`, `host_since`, `neighbourhood_group`, `latitude`, `longitude`, `room_type`, `accomodates`, `price`, `availability_30`, `availability_365`.
+
+Host information (6 features): `host_id`, `host_response_rate`, `host_acceptance_rate`, `host_listings_count`, `host_has_profile_pic`, `host_identity_verified`.
+
+Review information (10 features): `number_of_review`, `last_review`, `review_scores_rating`, `review_scores_accuracy`, `review_scores_cleanliness`, `review_scores_checkin`, `review_scores_communication`, `review_scores_location`, `review_scores_value`, `review_per_month`. 
+
+
+## The year_bar Dataset
+
+For the year_bar.csv file, we transform the hosts' data from the `host_since` column in order to see how Airbnb's hosting members grow over the years. We grouped the data by different boroughs then pivot the dataset wider so we have data filtered out for every year since 2008. 
 
 ```{r,warning=FALSE}
 ## packages loaded
-library(readxl)
-library(ggplot2)
 library(tidyverse)
-library(treemapify)
-library(mi)
-library(GGally)
-library(gridExtra)
-library(lubridate)
+
 ```
 
+Let's see the whole picture of the dataset: 
 ```{r}
-## data loaded
-airbnb_ny <- read_excel("./resource/airbnb_ny.xlsx")
-```
-
-```{r}
-## data transformation
-airbnb_new <- airbnb_ny %>% mutate(id = as.factor(id),host_id = as.factor(host_id))
+year_bar <- read_csv("./resource/year_bar.csv")
+year_bar
 ```
 
 
-```{r}
-## missing value situation
-colSums(is.na(airbnb_new)) %>% sort(decreasing = TRUE)
-```
 
-The brief understanding of the data is that there are 44187 airbnb houses collected in this dataset and 26 features are scraped which can be gathered into three main feature group, ie, house information, host information, evaluation information
 
-House information (10 features): id, host_since, neighbourhood_group, latitude, longitude, room_type, accomodates, price, availability_30, availability_365
 
-Host information (6 features): host_id, host_response_rate, host_acceptance_rate, host_listings_count, host_has_profile_pic, host_identity_verified.
 
-Evaluation information (10 features): number_of_review, last_review, review_scores_rating, review_scores_accuracy, review_scores_cleanliness, review_scores_checkin, review_scores_communication, review_scores_location, review_scores_value, review_per_month
+
 
 

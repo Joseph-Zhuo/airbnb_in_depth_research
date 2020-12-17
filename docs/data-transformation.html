@@ -24,7 +24,7 @@
 <meta name="author" content="Zhiyi Chen and Zhuo Zhuo" />
 
 
-<meta name="date" content="2020-12-16" />
+<meta name="date" content="2020-12-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -77,7 +77,8 @@
 <li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#inside-airbnb"><i class="fa fa-check"></i><b>2.1</b> Inside Airbnb</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a><ul>
-<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#the-columns-we-chose"><i class="fa fa-check"></i><b>3.1</b> The Columns we chose</a></li>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#the-columns-we-chose-from-listings.csv"><i class="fa fa-check"></i><b>3.1</b> The Columns We Chose From Listings.csv</a></li>
+<li class="chapter" data-level="3.2" data-path="data-transformation.html"><a href="data-transformation.html#the-year_bar-dataset"><i class="fa fa-check"></i><b>3.2</b> The year_bar Dataset</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
 <li class="chapter" data-level="5" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html"><i class="fa fa-check"></i><b>5</b> Results to the Research Questions</a><ul>
@@ -110,31 +111,34 @@
             <section class="normal" id="section-">
 <div id="data-transformation" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Data transformation</h1>
-<div id="the-columns-we-chose" class="section level2">
-<h2><span class="header-section-number">3.1</span> The Columns we chose</h2>
-<p>Since the original data are very dirty, we processed it first directly in excel and loaded it to R software for further processing.</p>
-<pre><code>##          host_response_rate        host_acceptance_rate      review_scores_location 
-##                       22892                       16754                       11484 
-##         review_scores_value       review_scores_checkin      review_scores_accuracy 
-##                       11483                       11479                       11464 
-## review_scores_communication   review_scores_cleanliness        review_scores_rating 
-##                       11459                       11451                       11432 
-##                 last_review           reviews_per_month         host_listings_count 
-##                       10394                       10394                        5540 
-##                  host_since        host_has_profile_pic      host_identity_verified 
-##                          17                          17                          17 
-##                          id                     host_id         neighbourhood_group 
-##                           0                           0                           0 
-##                    latitude                   longitude                   room_type 
-##                           0                           0                           0 
-##                accommodates                       price             availability_30 
-##                           0                           0                           0 
-##            availability_365           number_of_reviews 
-##                           0                           0</code></pre>
-<p>The brief understanding of the data is that there are 44187 airbnb houses collected in this dataset and 26 features are scraped which can be gathered into three main feature group, ie, house information, host information, evaluation information</p>
-<p>House information (10 features): id, host_since, neighbourhood_group, latitude, longitude, room_type, accomodates, price, availability_30, availability_365</p>
-<p>Host information (6 features): host_id, host_response_rate, host_acceptance_rate, host_listings_count, host_has_profile_pic, host_identity_verified.</p>
-<p>Evaluation information (10 features): number_of_review, last_review, review_scores_rating, review_scores_accuracy, review_scores_cleanliness, review_scores_checkin, review_scores_communication, review_scores_location, review_scores_value, review_per_month</p>
+<div id="the-columns-we-chose-from-listings.csv" class="section level2">
+<h2><span class="header-section-number">3.1</span> The Columns We Chose From Listings.csv</h2>
+<p>After we downloaded the CSV file, we processed it first directly in excel as it is a great way to look for every column we had. We chose to keep: <code>id</code>,<code>host_id</code>,<code>host_since</code>,<code>host_response_rate</code>,<code>host_acceptance_rate</code>, <code>host_listings_count</code>, <code>host_has_profile_pic</code>, <code>host_identity_verified</code>, <code>neighbourhood_group</code>, <code>latitude</code>, <code>longitude</code>, <code>room_type</code>, <code>accommodates</code>, <code>price</code>, <code>availability_30</code>, <code>availability_365</code>, <code>number_of_reviews</code>, <code>last_review</code>, <code>review_scores_rating</code>, <code>review_scores_accuracy</code>, <code>review_scores_cleanliness</code>, <code>review_scores_checkin</code>, <code>review_scores_communication</code>, <code>review_scores_location</code>, <code>review_scores_value</code>, and <code>reviews_per_month</code> as these variables might be meaningful for our further analysis.</p>
+<p>The brief understanding of the data is that there are 44187 Airbnb properties collected in this dataset and 26 features that we chose can be grouped into three feature groups: property information, host information, review information</p>
+<p>Property information (10 features): <code>id</code>, <code>host_since</code>, <code>neighbourhood_group</code>, <code>latitude</code>, <code>longitude</code>, <code>room_type</code>, <code>accomodates</code>, <code>price</code>, <code>availability_30</code>, <code>availability_365</code>.</p>
+<p>Host information (6 features): <code>host_id</code>, <code>host_response_rate</code>, <code>host_acceptance_rate</code>, <code>host_listings_count</code>, <code>host_has_profile_pic</code>, <code>host_identity_verified</code>.</p>
+<p>Review information (10 features): <code>number_of_review</code>, <code>last_review</code>, <code>review_scores_rating</code>, <code>review_scores_accuracy</code>, <code>review_scores_cleanliness</code>, <code>review_scores_checkin</code>, <code>review_scores_communication</code>, <code>review_scores_location</code>, <code>review_scores_value</code>, <code>review_per_month</code>.</p>
+</div>
+<div id="the-year_bar-dataset" class="section level2">
+<h2><span class="header-section-number">3.2</span> The year_bar Dataset</h2>
+<p>For the year_bar.csv file, we transform the hosts’ data from the <code>host_since</code> column in order to see how Airbnb’s hosting members grow over the years. We grouped the data by different boroughs then pivot the dataset wider so we have data filtered out for every year since 2008.</p>
+<p>Let’s see the whole picture of the dataset:</p>
+<pre><code>## # A tibble: 13 x 7
+##     year Bronx Brooklyn Manhattan Queens Staten_Island Total
+##    &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;
+##  1  2008     0       15         7      2             0    24
+##  2  2009     1      138        99     14             3   255
+##  3  2010    25      427       320     43             4   819
+##  4  2011    23     1215       895    111            10  2254
+##  5  2012    40     1966      1658    262            20  3946
+##  6  2013    58     2283      2290    352            13  4996
+##  7  2014   108     2771      3001    599            27  6506
+##  8  2015   100     2800      3211    745            33  6889
+##  9  2016   158     2065      2596    758            52  5629
+## 10  2017   187     1299      1489    768            46  3789
+## 11  2018   180     1111      1335    710            45  3381
+## 12  2019   197     1213      2073    768            43  4294
+## 13  2020    72      433       606    265            12  1388</code></pre>
 
 </div>
 </div>
