@@ -9,15 +9,20 @@ site: bookdown::bookdown_site
 
 This project is inspired by ........
 
+Airbnb is an App beginning in 2008. It is a platform for hosts to provide houses and spaces for travelers to stay in during their vacation. Airbnb’s Impact on the Hotel Industry, “60% of travelers who use both Airbnb and hotels prefer Airbnb over comparable hotels when going on vacation.” (Source link: https://listwithclever.com/real-estate-blog/airbnb-vs-hotels-study/).
+information based on these three criteria.
+
+
+
 
 System".[]https://insideairbnb
 
 >"
-Citi Bike is a privately owned public bicycle sharing system serving the New York City boroughs of the Bronx, Brooklyn, Manhattan, and Queens, as well as Jersey City, New Jersey. Named after lead sponsor Citigroup, it is operated by Motivate (formerly Alta Bicycle Share), with former Metropolitan Transportation Authority CEO Jay Walder as chief executive until September 30, 2018[1] when the company was acquired by Lyft. The system's bikes and stations use BIXI-branded technology from PBSC Urban Solutions.
->First proposed in 2008 by the New York City Department of Transportation, Citi Bike's scheduled 2011 opening was delayed by Hurricane Sandy and technological problems. It officially opened in May 2013 with 332 stations and 6,000 bikes. Annual expansions have brought the totals to 706 stations and 12,000 bikes as of October 2017, making the service the largest bike sharing program in the United States. Further expansions for Citi Bike are planned to extend its service area across the Bronx, Brooklyn, Manhattan, and Queens, and increase the number of bikes to 40,000."
+Placeholder
+>placeholder."
 >--[Wiki Link]https://en.wikipedia.org/wiki.
 
-In 2020, due to the COVID 19 Pandemic, New York City implemented the lock down and social distance policy. Many Companies requires employees to work from home instead of going to office everyday. We want to analyze the pandemic's influence on New York City residents, specially for 1.6M Manhattan residents who use Citi Bike as part of their commute tools.
+In 2020, due to the COVID 19 Pandemic, New York City implemented the lock down and social distance policy. Many Companies requires employees to work from home instead of going to office everyday. We want to analyze the pandemic's influence on New York City residents, specially for 1.6M Manhattan residents who use as part of their commute tools.
 
 In our project, we will research on different topics:
 
@@ -35,5 +40,10 @@ In our project, we will research on different topics:
 
 7. Top 5 most 
 
+1.Room Type - How do the room types distribute across neighborhoods quantitatively and spatially? Is there any relationship between room types and properties’ number of days available in a year?
+
+2.Price-  Based on two major room types(entire home/apartment & private room), is price differs by different neighborhoods or transportation options? 
+
+3.Ratings/comments- Is there any distribution patterns of rating scores in each neighborhood?  How do emotions of users change over time for their airbnb experience?
 
 
