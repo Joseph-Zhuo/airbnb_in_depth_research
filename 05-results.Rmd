@@ -144,10 +144,9 @@ airbnb_new$price_level[which(airbnb_new$price < 65)] = "Budget"
 airbnb_new$price_level <- as.factor(airbnb_new$price_level)
 airbnb_new$price_level<- factor(airbnb_new$price_level, levels = c("Budget","Medium","Expensive"))
 airbnb_new$overall_review = "Good"
-airbnb_new$overall_review[which(airbnb_new$review_scores_rating == 100)] = "Excellent"
+airbnb_new$overall_review[which(airbnb_new == 100)] = "Excellent"
 airbnb_new$overall_review[which(airbnb_new$review_scores_rating < 92)] = "Poor"
 airbnb_new$overall_review <- as.factor(airbnb_new$overall_review)
-
 
 colors <- tibble('Poor' = "#8461c1", 'Good' = "#5e3c99",'Excellent'="#3c2662")
 ##Graph
