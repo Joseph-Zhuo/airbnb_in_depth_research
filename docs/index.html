@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>YOUR TITLE HERE</title>
-  <meta name="description" content="YOUR TITLE HERE" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <title>Airbnb Research</title>
+  <meta name="description" content="Airbnb Research" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="YOUR TITLE HERE" />
+  <meta property="og:title" content="Airbnb Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,15 +16,15 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="YOUR TITLE HERE" />
+  <meta name="twitter:title" content="Airbnb Research" />
   
   
   
 
-<meta name="author" content="YOUR NAMES HERE" />
+<meta name="author" content="Zhiyi Chen and Zhuo Zhuo" />
 
 
-<meta name="date" content="2020-11-09" />
+<meta name="date" content="2020-12-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,7 +33,6 @@
   
 
 <link rel="next" href="data-sources.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -52,6 +51,8 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 
@@ -68,18 +69,28 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">SHORT TITLE HERE</a></li>
+<li><a href="./">Airbnb Research</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a></li>
-<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a></li>
+<li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#inside-airbnb"><i class="fa fa-check"></i><b>2.1</b> Inside Airbnb</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#the-columns-we-chose"><i class="fa fa-check"></i><b>3.1</b> The Columns we chose</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
-<li class="chapter" data-level="5" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>5</b> Results</a></li>
+<li class="chapter" data-level="5" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html"><i class="fa fa-check"></i><b>5</b> Results to the Research Questions</a><ul>
+<li class="chapter" data-level="5.1" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#airbnb-development-in-new-york-city-over-the-years"><i class="fa fa-check"></i><b>5.1</b> Airbnb Development in New York City Over the Years</a></li>
+<li class="chapter" data-level="5.2" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#features-influence-airbnb-properties-review-scores"><i class="fa fa-check"></i><b>5.2</b> Features Influence Airbnb Properties’ Review Scores</a></li>
+<li class="chapter" data-level="5.3" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#how-does-the-covid-19-influence-airbnb"><i class="fa fa-check"></i><b>5.3</b> How does the covid-19 influence airbnb</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a></li>
+<li class="chapter" data-level="8" data-path="what-we-found.html"><a href="what-we-found.html"><i class="fa fa-check"></i><b>8</b> What we found…</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -89,7 +100,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">YOUR TITLE HERE</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Airbnb Research</a>
           </h1>
         </div>
 
@@ -98,12 +109,36 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">YOUR TITLE HERE</h1>
-<p class="author"><em>YOUR NAMES HERE</em></p>
-<p class="date"><em>2020-11-09</em></p>
+<h1 class="title">Airbnb Research</h1>
+<p class="author"><em>Zhiyi Chen and Zhuo Zhuo</em></p>
+<p class="date"><em>2020-12-16</em></p>
 </div>
-<div id="introduction" class="section level1" number="1">
+<div id="introduction" class="section level1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<p>This project is inspired by ……..</p>
+<p>Airbnb is an App beginning in 2008. It is a platform for hosts to provide houses and spaces for travelers to stay in during their vacation. Airbnb’s Impact on the Hotel Industry, “60% of travelers who use both Airbnb and hotels prefer Airbnb over comparable hotels when going on vacation.” (Source link: <a href="https://listwithclever.com/real-estate-blog/airbnb-vs-hotels-study/" class="uri">https://listwithclever.com/real-estate-blog/airbnb-vs-hotels-study/</a>).
+information based on these three criteria.</p>
+<p>System".[]<a href="https://insideairbnb" class="uri">https://insideairbnb</a></p>
+<blockquote>
+<p>"
+Placeholder
+placeholder."
+–[Wiki Link]<a href="https://en.wikipedia.org/wiki" class="uri">https://en.wikipedia.org/wiki</a>.</p>
+</blockquote>
+<p>In 2020, due to the COVID 19 Pandemic, New York City implemented the lock down and social distance policy. Many Companies requires employees to work from home instead of going to office everyday. We want to analyze the pandemic’s influence on New York City residents, specially for 1.6M Manhattan residents who use as part of their commute tools.</p>
+<p>In our project, we will research on different topics:</p>
+<ol style="list-style-type: decimal">
+<li><p>Eg1</p></li>
+<li><p>The Membership analysis (Age, Gender, Annual memberships or Subscriber)</p></li>
+<li><p>Time Series</p></li>
+<li><p>W</p></li>
+<li><p>Eg 5</p></li>
+<li><p>users’pattern</p></li>
+<li><p>Top 5 most</p></li>
+</ol>
+<p>1.Room Type - How do the room types distribute across neighborhoods quantitatively and spatially? Is there any relationship between room types and properties’ number of days available in a year?</p>
+<p>2.Price- Based on two major room types(entire home/apartment &amp; private room), is price differs by different neighborhoods or transportation options?</p>
+<p>3.Ratings/comments- Is there any distribution patterns of rating scores in each neighborhood? How do emotions of users change over time for their airbnb experience?</p>
 
 </div>
             </section>
@@ -143,7 +178,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/main/index.Rmd",
+"link": "https://github.com/Joseph-Zhuo/airbnb_in_depth_research/edit/main/index.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -151,7 +186,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/main/index.Rmd",
+"link": "https://github.com/Joseph-Zhuo/airbnb_in_depth_research/blob/main/index.Rmd",
 "text": null
 },
 "download": null,

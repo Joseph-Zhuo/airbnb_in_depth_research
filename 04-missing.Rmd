@@ -32,7 +32,6 @@ airbnb_ny <- read_excel("./resource/airbnb_ny.xlsx")
 ```
 
 
-
 ```{r}
 gg_miss_var(airbnb_ny)
 ```

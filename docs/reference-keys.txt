@@ -1,10 +1,13 @@
+introduction
 data-sources
+inside-airbnb
 data-transformation
+the-columns-we-chose
 missing-values
-results
-data-processing
-how-does-airbnb-in-new-york-develop-these-years
-which-features-influence-airbnb-houses-scores-most
+results-to-the-research-questions
+airbnb-development-in-new-york-city-over-the-years
+features-influence-airbnb-properties-review-scores
 how-does-the-covid-19-influence-airbnb
 interactive-component
 conclusion
+what-we-found

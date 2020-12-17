@@ -14,6 +14,7 @@ library(tidyverse)
 library(treemapify)
 library(mi)
 library(GGally)
+library(vcd)
 library(gridExtra)
 library(lubridate)
 library(ggalluvial)
@@ -112,7 +113,7 @@ ggplot(draw_data, aes(area = number_of_id,fill=reviewer_count, label = area)) +
   geom_treemap() +
   geom_treemap_text(fontface = "italic", colour = "black", place = "center",alpha=.7)+
   scale_fill_distiller(palette="Greens",trans = "reverse", name = "Number of reviews", labels = comma)+
-  xlab("(Areas show the total number of listings)")+
+  xlab("(Areas show the total number of listings)")+ 
   ggtitle("Treemap of Airbnb reviews in NYC")+theme(plot.title = element_text(hjust = 0.5))
   
   

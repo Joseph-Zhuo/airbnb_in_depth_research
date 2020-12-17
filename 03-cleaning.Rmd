@@ -2,12 +2,6 @@
 
 ## The Columns we chose
 
-```{r setup, include=FALSE}
- # keep this chunk in your .Rmd file
- knitr::opts_chunk$set(warning = FALSE, message = FALSE)
-```
-
-
 Since the original data are very dirty, we processed it first directly in excel and loaded it to R software for further processing.
 
 ```{r,warning=FALSE}
