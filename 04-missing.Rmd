@@ -34,11 +34,6 @@ airbnb_ny <- read_excel("./resource/airbnb_ny.xlsx")
 
 
 ```{r}
-vis_miss(airbnb_ny, warn_large_data = F)
-```
-
-
-```{r}
 gg_miss_var(airbnb_ny)
 ```
 
