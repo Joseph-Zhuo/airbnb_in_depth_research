@@ -148,14 +148,13 @@ airbnb_new$overall_review[which(airbnb_new$review_scores_rating == 100)] = "Exce
 airbnb_new$overall_review[which(airbnb_new$review_scores_rating < 92)] = "Poor"
 airbnb_new$overall_review <- as.factor(airbnb_new$overall_review)
 
-
 colors <- tibble('Poor' = "#8461c1", 'Good' = "#5e3c99",'Excellent'="#3c2662")
 ##Graph
 mosaic(overall_review ~ price_level, direction = "v", airbnb_new,highlighting_fill = c(colors$Poor, colors$Good,colors$Excellent),
        main = "Mosaic plot of overall review scores and price")
 ```
 
-As we can see from the mosaic plot, more expensive properties tend to have slightly more excellent reviews and less poor reviews. However, we do not think the relationship is very significant. Furthermore, we can observe that most listings on Airbnb have reasonable prices(below XXX above XXX) and their review scores are all good(from 92 - 100).
+As we can see from the mosaic plot, more expensive properties tend to have slightly more excellent reviews and less poor reviews. However, we do not think the relationship is very significant. Furthermore, we can observe that most listings on Airbnb have reasonable prices(below `$160` above `$65`) and their review scores are all good(from 92-100).
 
 We ploted a scatter plot for further statistical analysis. 
 ```{r,warning=FALSE,message= FALSE}

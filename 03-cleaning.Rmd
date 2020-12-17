@@ -21,7 +21,10 @@ For the year_bar.csv file, we transform the hosts' data from the `host_since` co
 ```{r,warning=FALSE}
 ## packages loaded
 library(tidyverse)
-
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(readxl)
 ```
 
 Let's see the whole picture of the dataset: 
@@ -30,7 +33,28 @@ year_bar <- read_csv("./resource/year_bar.csv")
 year_bar
 ```
 
+## Data manipulation 
+```{r}
+airbnb_ny <- read_excel("./resource/airbnb_ny.xlsx")
+```
 
+To conduct further analysis and visualizations, we filtered the `price` variable into three levels "Expensive", "Medium", and "Budget". We define any property that has a price higher or equal to `$160` as an expensive Airbnb listing. The medium price level is from `$65` to `$159`. The budget properties are those cheaper than `$65`. Meanwhile, we also separated the `review_scores_rating` variable into three levels, "Excellent", "Poor", and "Good". The definition of an excellent property is that the listing received an overall score rating of 100. We defined the scores from 92 to 99 to be good review scores. Lastly, those properties that received a review rating of less than 92 are poor reviews.  We separated three levels of these two variables according to their interquartile ranges. 
+
+
+Price: 
+```{r}
+quantile(as.numeric(airbnb_ny$price), probs=c(.25, .75), na.rm = TRUE)
+ggplot(airbnb_ny,aes(price))+
+  geom_boxplot(varwidth=TRUE)
+```
+
+Overall review scores:
+```{r}
+quantile(as.numeric(airbnb_ny$review_scores_rating), probs=c(.25, .75), na.rm = TRUE)
+
+ggplot(airbnb_ny,aes(review_scores_rating))+
+  geom_boxplot(varwidth=TRUE)
+```
 
 
 

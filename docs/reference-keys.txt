@@ -4,6 +4,7 @@ inside-airbnb
 data-transformation
 the-columns-we-chose-from-listings.csv
 the-year_bar-dataset
+data-manipulation
 missing-values
 results-to-the-research-questions
 airbnb-development-in-new-york-city-over-the-years

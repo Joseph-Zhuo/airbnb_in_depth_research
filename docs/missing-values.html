@@ -79,6 +79,7 @@
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a><ul>
 <li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#the-columns-we-chose-from-listings.csv"><i class="fa fa-check"></i><b>3.1</b> The Columns We Chose From Listings.csv</a></li>
 <li class="chapter" data-level="3.2" data-path="data-transformation.html"><a href="data-transformation.html#the-year_bar-dataset"><i class="fa fa-check"></i><b>3.2</b> The year_bar Dataset</a></li>
+<li class="chapter" data-level="3.3" data-path="data-transformation.html"><a href="data-transformation.html#data-manipulation"><i class="fa fa-check"></i><b>3.3</b> Data manipulation</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
 <li class="chapter" data-level="5" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html"><i class="fa fa-check"></i><b>5</b> Results to the Research Questions</a><ul>
@@ -118,8 +119,11 @@
 <div id="missing-values" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Missing values</h1>
 <p>We plot a vis_miss heat graph to investigate the missing patterns in variables that involved in following analysis.</p>
-<p><img src="airbnb_in_depth_research_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>For missing row patterns, we observe that most of the rows don’t have missing values. For missing column patterns, we find that there are 12 columns having missing values. Variable <code>transit</code> has the highest number of missing values, with about 17% of the value missing. Since “transit” is an entry that needs to be manually entered by property owners, we think the laziness of some owners lead to the missing values in <code>transit</code>. Other 7 variables of <code>comments</code>, <code>location_scores</code>(denoted as “locatin_scrs” in the plot), <code>checkin_scores</code>(denoted as “checkin_scrs” in the plot), <code>communication_scores</code>(denoted as “cmmnctn_scrs” in the plot), <code>clean_scores</code>,<code>accuracy_scores</code>(denoted as “accuracy_scrs” in the plot) and <code>review_scores</code>(denoted as “rvw_scores” in the plot) only have missing values in very few rows hence their missing distribution are not reflected in the bar graph on the bottom.</p>
+<p><img src="airbnb_in_depth_research_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>For missing row patterns, we observe that most of the rows don’t have missing values. For missing column patterns, we find that there are 12 columns having missing values. Variables <code>host_response_rate</code> and <code>host_acceptance_rate</code> have the highest number of missing values, with 52% and 38% of the value missing. We believe the large amount of missing values in these two is normal for this dataset because the hosts will not respond to all the requests and certainly will not accept all customers. According to our analysis, most hosts filter out about half of their requests via these two steps. Therefore, these two variables make sense to have a large number of missings.
+Moreover, these two variables will not influence our research since we wi not use them in our further analysis.</p>
+<p>Other 9 variables of <code>last_review</code>, <code>review_scores_rating</code>, <code>review_scores_accuracy</code>, <code>review_scores_cleanliness</code>, <code>review_scores_checkin</code>, <code>review_scores_communication</code>, <code>review_scores_location</code>, <code>review_scores_value</code>, and <code>reviews_per_month</code> all about the same amount of missing values ( around 25%), and they all related to the same attribute “reviews”. Thus, they will not influence our analysis of the relationship among other factors and overall review scores.</p>
+<p>The table below shows the exact number of missing values of all variables.</p>
 <pre><code>##          host_response_rate        host_acceptance_rate 
 ##                       22892                       16754 
 ##      review_scores_location         review_scores_value 
