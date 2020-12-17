@@ -1,8 +1,49 @@
 ---
-title: "Airbnb"
+title: "Airbnb Research"
 author: "Zhiyi Chen and Zhuo Zhuo"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-#Introduction
+# Introduction
+
+This project is inspired by ........
+
+Airbnb is an App beginning in 2008. It is a platform for hosts to provide houses and spaces for travelers to stay in during their vacation. Airbnb’s Impact on the Hotel Industry, “60% of travelers who use both Airbnb and hotels prefer Airbnb over comparable hotels when going on vacation.” (Source link: https://listwithclever.com/real-estate-blog/airbnb-vs-hotels-study/).
+information based on these three criteria.
+
+
+
+
+System".[]https://insideairbnb
+
+>"
+Placeholder
+>placeholder."
+>--[Wiki Link]https://en.wikipedia.org/wiki.
+
+In 2020, due to the COVID 19 Pandemic, New York City implemented the lock down and social distance policy. Many Companies requires employees to work from home instead of going to office everyday. We want to analyze the pandemic's influence on New York City residents, specially for 1.6M Manhattan residents who use as part of their commute tools.
+
+In our project, we will research on different topics:
+
+1. Eg1
+
+2. The Membership analysis (Age, Gender, Annual memberships or Subscriber)
+
+3. Time Series 
+
+4. W
+
+5. Eg 5
+
+6.  users'pattern 
+
+7. Top 5 most 
+
+1.Room Type - How do the room types distribute across neighborhoods quantitatively and spatially? Is there any relationship between room types and properties’ number of days available in a year?
+
+2.Price-  Based on two major room types(entire home/apartment & private room), is price differs by different neighborhoods or transportation options? 
+
+3.Ratings/comments- Is there any distribution patterns of rating scores in each neighborhood?  How do emotions of users change over time for their airbnb experience?
+
+

@@ -1,1 +1,50 @@
 # Missing values
+
+
+We plot a vis_miss heat graph to investigate the missing patterns in variables that involved in following data analysis.
+
+
+For missing row patterns, we observe that most of the rows don't have missing values. Majority of rows that with missing values only have missings in variable  .   
+
+
+For missing column patterns, we find that there are 8 columns having missing values. Variable ```transit``` has the highest number of missing values, with about 17% of the value missing. Since “transit” is an entry that needs to be manually entered by property owners, we think the laziness of some owners lead to the missing values in ```transit```. Other 7 variables of ```comments```, ```location_scores```(denoted as "locatin_scrs" in the plot), ```checkin_scores```(denoted as "checkin_scrs" in the plot), ```communication_scores```(denoted as "cmmnctn_scrs" in the plot), ```clean_scores```,```accuracy_scores```(denoted as "accuracy_scrs" in the plot)  and ```review_scores```(denoted as "rvw_scores" in the plot) only have missing values in very few rows hence their missing distribution are not reflected in the bar graph on the bottom.
+
+
+```{r,warning=FALSE}
+## packages loaded
+library(readxl)
+library(ggplot2)
+library(tidyverse)
+library(treemapify)
+library(mi)
+library(GGally)
+library(gridExtra)
+library(lubridate)
+library(ggalluvial)
+library(scales)
+library(naniar)
+```
+
+
+```{r}
+## data loaded
+airbnb_ny <- read_excel("./resource/airbnb_ny.xlsx")
+```
+
+
+
+```{r}
+gg_miss_var(airbnb_ny)
+```
+
+
+```{r}
+colSums(is.na(airbnb_ny)) %>%sort(decreasing =TRUE)
+```
+
+
+
+
+
+
+
