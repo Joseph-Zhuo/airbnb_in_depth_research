@@ -75,6 +75,7 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="data-sources.html"><a href="data-sources.html"><i class="fa fa-check"></i><b>2</b> Data sources</a><ul>
 <li class="chapter" data-level="2.1" data-path="data-sources.html"><a href="data-sources.html#inside-airbnb"><i class="fa fa-check"></i><b>2.1</b> Inside Airbnb</a></li>
+<li class="chapter" data-level="2.2" data-path="data-sources.html"><a href="data-sources.html#what-we-chose"><i class="fa fa-check"></i><b>2.2</b> What We Chose</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="data-transformation.html"><a href="data-transformation.html"><i class="fa fa-check"></i><b>3</b> Data transformation</a><ul>
 <li class="chapter" data-level="3.1" data-path="data-transformation.html"><a href="data-transformation.html#the-columns-we-chose-from-listings.csv"><i class="fa fa-check"></i><b>3.1</b> The Columns We Chose From Listings.csv</a></li>
@@ -120,19 +121,21 @@
 <h1><span class="header-section-number">Chapter 2</span> Data sources</h1>
 <div id="inside-airbnb" class="section level2">
 <h2><span class="header-section-number">2.1</span> Inside Airbnb</h2>
-<p>System".[ ]<a href="https://insideairbnb" class="uri">https://insideairbnb</a></p>
+<p>The data is about 2020 Airbnb Listings in New York City. We download data from the Inside Airbnb [website]<a href="http://insideairbnb.com/get-the-data.html" class="uri">http://insideairbnb.com/get-the-data.html</a>.</p>
+<p>The Inside Airbnb project was brought to you by Murray Cox. He is an independent digital storyteller, community activist and technologist, conceived the project, compiled and analyzed the data and built the site. More story about Mr.Cox and his website:</p>
 <blockquote>
-<p>"
-Placeholder
-placeholder."
-–[Wiki Link]<a href="https://en.wikipedia.org/wiki" class="uri">https://en.wikipedia.org/wiki</a>.</p>
+<p>"What began as a simple class project turned into an obsession that spawned the website Inside Airbnb. Cox now spends about 10 hours a week parsing statistics from listings in more than 100 cities and fielding half a dozen queries from academics and journalists around the world. Using publicly available information, Inside Airbnb gives a view into how many listings there are in a certain zip code, how many are entire private homes versus a room in a home, the price and the number of reviews each has received.It’s valuable information for cities that are trying to crack down on entire networks of managed Airbnb units or serial renters whose practice eliminates apartments that would be otherwise available for people looking for a place to live.</p>
 </blockquote>
-<p>More about Inside Airbnb…</p>
-<ol style="list-style-type: decimal">
-<li><p>Airbnb Listings data(about 48000 records) (listings.csv);</p></li>
-<li><p>year_bar.csv</p></li>
-</ol>
-<p>Dataset 1 contains 106 variables, with slightly more categorical variables than numeric ones. Dataset 2 contains 6 variables and the most important one for analysis is the detailed comments. Since there are so many records in dataset 2, one issue appears to be that processing all of them would take a huge amount of computing time. Therefore, we need to do random sampling on the entire data. Another issue about our raw data is that there exists missing values in both datasets and including missing values of numeric variables in our analysis and exploration would result in calculation error. Therefore, we have to remove them under necessary conditions. In addition, there exists some listings with zero price which should not be included in our analysis, so we removed those data points. We also get rid of the listings with “availability_365” = 0, which means that these properties are not available now and there is no point for analyzing them.</p>
+<blockquote>
+<p>Cox receives payments from some cities, including $200 a month from San Francisco, as well as the hotel trade association, and researchers. Maintaining the website costs him about $10,000 a year and the payments usually cover the bills, he says. In the past year, he has been flown to Barcelona, Australia, and Paris to speak at various home-sharing events about his findings."
+–[Yahoo Finance]<a href="https://finance.yahoo.com/news/meet-murray-cox-man-trying-100014100.html" class="uri">https://finance.yahoo.com/news/meet-murray-cox-man-trying-100014100.html</a>.</p>
+</blockquote>
+</div>
+<div id="what-we-chose" class="section level2">
+<h2><span class="header-section-number">2.2</span> What We Chose</h2>
+<p>Thus, we convinced that this website and the datasets are reliable because city officials are also using them for property management. We choose the data compiled on Oct.24 in the New York Metropolitan area.</p>
+<p>The raw Listings dataset contains 74 variables, with slightly more categorical variables than numeric ones. Since the CSV data is well-established we will directly load data into R after we choose what variables to keep.</p>
+<p>There are some listings with zero rental price which does not make sense in our analysis, therefore, we removed those data points. We also found there are listings with “availability_365” = 0, which means that these properties are for long-term rental. For this project we will focus on vacation rental, so we removed those values as well.</p>
 
 </div>
 </div>

@@ -1,36 +1,31 @@
+# EDAV Project: In-depth Market Research of Airbnb in NYC
+
+**Updated**: 2020-12-17
+
+**Authors**: Zhiyi Chen, Zhuo Zhuo
+
+## Goals
+
+For this project, we decided to focus our research on New York City’s Airbnb data as it is one of the hottest cities for tourism. Since Airbnb is facing fierce competition from the hotel industry here, we believe that New York City can be a great case for us to analyze its business success. 
 
 
-### Edit some key files
+We will explore the following questions:
 
-- [ ] 1. In `index.Rmd`, change YOUR TITLE HERE to your title.
-
-- [ ] 2. In `index.Rmd`, change YOUR NAMES HERE to your names.
-
-- [ ] 3. In `_bookdown.yml`, change YOUR GITHUB USERNAME to your GitHub username in the two places it appears.
-
-- [ ] 4. In `_bookdown.yml`, change YOUR GITHUB REPO to your GitHub repo name in the two places it appears.
-
-(Note that 3. and 4. provide links to the `.Rmd` files of your project for editing and viewing. If you move your `.Rmd` files you will need to update these file paths. Once your book is rendered, test that the edit (pen) and view (eye) buttons work.)
-
-- [ ] 5. In `_output.yml`, change YOUR SHORT TITLE to a shortened version of your title. (Leave the "after:" line indicating that the book was published with bookdown as is.)
-
-### Render the book
-
-- [ ] 1. Install **bookdown** with `install.packages("bookdown")`. If you already have it, update to the most recent version.
-
-- [ ] 2. Render locally with `bookdown::render_book("index.Rmd")` or clicking the *Knit* button. (Yes, this is new!)
-
-- [ ] 3. Use `browseURL("docs/index.html")` to view your book locally (or just open `index.html` in a browser).
-
-- [ ] 4. If it looks good, commit and push all changed files to GitHub. 
-
-(You will need to repeat steps 2 and 4 every time you wish to update the book online.)
+1. How do the distribution and occupancy of Airbnb's properties in the New York Metropolitan area change over the years? 
+  
+2.  What aspects influence the review score of an Airbnb property the most? 
+  
+3.  How does Covid-19 influence Airbnb businesses in New York City?
 
 
 
-### Edit README	
+## Data
 
-Once you've completed these steps, delete the content of this **README** and add a short description of your project with a link to the book URL. It would be appreciated if you add the following to the end:	
+We choose the data compiled on Oct.24 in the New York Metropolitan area.
+
+Listings: The listings data showing 74 attributes for each of the listings. Some attributes we will use in the project are Price (continuous), Longitude (continuous), Latitude (continuous), Listing_type (categorical), neighborhood (categorical), and ratings (continuous). 
+
+The details of the data can be viewed [here](https://github.com/Joseph-Zhuo/airbnb_in_depth_research/tree/main/resource).
 
 *This repo was initially generated from a bookdown template available here: https://github.com/jtr13/EDAVtemplate.*	
 

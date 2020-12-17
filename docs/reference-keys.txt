@@ -1,6 +1,7 @@
 introduction
 data-sources
 inside-airbnb
+what-we-chose
 data-transformation
 the-columns-we-chose-from-listings.csv
 the-year_bar-dataset
