@@ -16,7 +16,7 @@ Review information (10 features): `number_of_review`, `last_review`, `review_sco
 
 ## The year_bar Dataset
 
-For the year_bar.csv file, we transform the hosts' data from the `host_since` column in order to see how Airbnb's hosting members grow over the years. We grouped the data by different boroughs then pivot the dataset wider so we have data filtered out for every year since 2008. 
+For the year_bar.csv file, we transform the hosts' registration data from the `host_since` column in order to see how Airbnb's hosting members grow over the years. We grouped the data by different boroughs then pivot the dataset wider so we have data filtered out for every year since 2008. We will use this dataset for our interactive bar chart in part 6.
 
 ```{r,warning=FALSE}
 ## packages loaded
@@ -27,7 +27,7 @@ library(ggplot2)
 library(readxl)
 ```
 
-Let's see the whole picture of the dataset: 
+Let's see the dataset: 
 ```{r}
 year_bar <- read_csv("./resource/year_bar.csv")
 year_bar

@@ -1,7 +1,7 @@
 # Missing values
 
 
-We plot a vis_miss heat graph to investigate the missing patterns in variables that involved in following analysis.
+We plot a vis_miss variable graph to investigate the missing patterns in all the variables.
 
 
 ```{r,warning=FALSE}

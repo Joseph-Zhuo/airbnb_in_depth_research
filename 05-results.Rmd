@@ -93,7 +93,7 @@ From the graph above, it is very clear to learn some growth pattern of Airbnb in
 
 It is widely acknowledged that the review score is a remarkable judgment standard for customers, just like the bad comments which host will try their best to avoid. Sometimes even if one house's price is lower than another one, its lowest score will make customers have a decision to choose a more expensive one. It is necessary for us to find which feature is the one host should pay much attention to for getting a high review score for their listing(s).
 
-Overview of Airbnb reviews:
+### Overview of Airbnb reviews:
 
 From the treemap graph below, we can see that Brooklyn has the most number of reviews (darker color) although Manhattan has the most number of total Airbnb properties listed online (Larger area). We interpret this as properties in Brooklyn are more likely to have budget-friendly pricing. Thus, more tourists choose to stay in Brooklyn instead of Manhattan. 
 
@@ -128,6 +128,8 @@ p <- ggplot(airbnb_new,aes(x=review_scores_rating)) + geom_density(fill = 'light
 
 #mean(airbnb_new$review_scores_rating, na.rm = TRUE)
 ```
+
+### Dig into the details
 
 We selected a few features to visualize the relationship between them and review scores rating respectively. 
 
@@ -239,7 +241,7 @@ The huge difference in the density line indicates that whether host has profile 
 
 To answer the question "Which features influence New York's airbnb houses' scores most", houses with high price and high number of review are more likely to contribute to high scores. Moreoever, "host with profile pic" can also be an impact indicator.
 
-## How does the Covid-19 influence airbnb
+## How Does the Covid-19 Influence Airbnb
 
 Covid-19 influences a large number of industry this year and how it causes impact on airbnb in New York. First of all, we should find indicators which can reflect the condition under covid-19. Here, we think last review date can be seen as the activity level of airbnb house. If the last review date is close to date today, it can be somhow considered as active status. In order to have more clear visualization, we only extract the data which have last review date after 2015-01-01.
 
