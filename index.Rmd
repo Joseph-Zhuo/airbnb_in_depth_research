@@ -1,5 +1,5 @@
 ---
-title: "Airbnb Research"
+title: "EDAV Project: Airbnb Research"
 author: "Zhiyi Chen and Zhuo Zhuo"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -8,10 +8,10 @@ site: bookdown::bookdown_site
 # Introduction
 
 
-Airbnb, Inc. is an online vacation rental marketplace company founded in 2008. It is a platform for hosts to offer their spare residences and spaces for travelers to stay during their vacation. Airbnb is an additional choice besides traditional hotels. Moreover, it cultivates a sharing-economy by allowing property owners to rent out private property.  According to the survey on Investopedia: Airbnb’s Impact on the vacation industry, “Airbnb is valued more highly than several individual hotel chains” (Source link: https://www.investopedia.com/articles/investing/112414/airbnb-brings-sharing-economy-hotels.asp).
+Airbnb, Inc. is an online vacation rental marketplace company founded in 2008. It is a platform for hosts to offer their spare residences and spaces for travelers to stay during their vacation. Airbnb is an additional choice besides traditional hotels. Moreover, it cultivates a sharing-economy by allowing property owners to rent out private properties.  According to Investopedia: *Airbnb’s Impact on the vacation industry*, “Airbnb is valued more highly than several individual hotel chains” (Source link: https://www.investopedia.com/articles/investing/112414/airbnb-brings-sharing-economy-hotels.asp).
 
 
-For this project, we decided to focus our research on New York City’s Airbnb data as it is one of the hottest cities for tourism. On the other hand, since Airbnb is facing fierce competition from the hotel industry here, we believe that New York City can be a good case for us to analyze its business success. 
+In this project, we decided to focus our research on New York City’s Airbnb data as it is one of the hottest cities for tourism. On the other hand, since Airbnb is facing fierce competitions from the hotel industry here, we believe that New York City can be a good case for us to analyze its business success. 
 
 
 We will explore the following questions:

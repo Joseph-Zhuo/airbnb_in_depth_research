@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Missing values | Airbnb Research</title>
-  <meta name="description" content="Chapter 4 Missing values | Airbnb Research" />
+  <title>Chapter 4 Missing values | EDAV Project: Airbnb Research</title>
+  <meta name="description" content="Chapter 4 Missing values | EDAV Project: Airbnb Research" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Missing values | Airbnb Research" />
+  <meta property="og:title" content="Chapter 4 Missing values | EDAV Project: Airbnb Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Missing values | Airbnb Research" />
+  <meta name="twitter:title" content="Chapter 4 Missing values | EDAV Project: Airbnb Research" />
   
   
   
@@ -85,8 +85,11 @@
 <li class="chapter" data-level="4" data-path="missing-values.html"><a href="missing-values.html"><i class="fa fa-check"></i><b>4</b> Missing values</a></li>
 <li class="chapter" data-level="5" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html"><i class="fa fa-check"></i><b>5</b> Results to the Research Questions</a><ul>
 <li class="chapter" data-level="5.1" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#airbnb-development-in-new-york-city-over-the-years"><i class="fa fa-check"></i><b>5.1</b> Airbnb Development in New York City Over the Years</a></li>
-<li class="chapter" data-level="5.2" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#features-influence-airbnb-properties-review-scores"><i class="fa fa-check"></i><b>5.2</b> Features Influence Airbnb Properties’ Review Scores</a></li>
-<li class="chapter" data-level="5.3" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#how-does-the-covid-19-influence-airbnb"><i class="fa fa-check"></i><b>5.3</b> How does the Covid-19 influence airbnb</a></li>
+<li class="chapter" data-level="5.2" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#features-influence-airbnb-properties-review-scores"><i class="fa fa-check"></i><b>5.2</b> Features Influence Airbnb Properties’ Review Scores</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#overview-of-airbnb-reviews"><i class="fa fa-check"></i><b>5.2.1</b> Overview of Airbnb reviews:</a></li>
+<li class="chapter" data-level="5.2.2" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#dig-into-the-details"><i class="fa fa-check"></i><b>5.2.2</b> Dig into the details</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="results-to-the-research-questions.html"><a href="results-to-the-research-questions.html#how-does-the-covid-19-influence-airbnb"><i class="fa fa-check"></i><b>5.3</b> How Does the Covid-19 Influence Airbnb</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="interactive-component.html"><a href="interactive-component.html"><i class="fa fa-check"></i><b>6</b> Interactive component</a></li>
 <li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> Conclusion</a><ul>
@@ -109,7 +112,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Airbnb Research</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EDAV Project: Airbnb Research</a>
           </h1>
         </div>
 
@@ -119,8 +122,8 @@
             <section class="normal" id="section-">
 <div id="missing-values" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Missing values</h1>
-<p>We plot a vis_miss heat graph to investigate the missing patterns in variables that involved in following analysis.</p>
-<p><img src="airbnb_in_depth_research_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>We plot a vis_miss variable graph to investigate the missing patterns in all the variables.</p>
+<p><img src="airbnb_in_depth_research_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <p>For missing row patterns, we observe that most of the rows don’t have missing values. For missing column patterns, we find that there are 12 columns having missing values. Variables <code>host_response_rate</code> and <code>host_acceptance_rate</code> have the highest number of missing values, with 52% and 38% of the value missing. We believe the large amount of missing values in these two is normal for this dataset because the hosts will not respond to all the requests and certainly will not accept all customers. According to our analysis, most hosts filter out about half of their requests via these two steps. Therefore, these two variables make sense to have a large number of missings.
 Moreover, these two variables will not influence our research since we wi not use them in our further analysis.</p>
 <p>Other 9 variables of <code>last_review</code>, <code>review_scores_rating</code>, <code>review_scores_accuracy</code>, <code>review_scores_cleanliness</code>, <code>review_scores_checkin</code>, <code>review_scores_communication</code>, <code>review_scores_location</code>, <code>review_scores_value</code>, and <code>reviews_per_month</code> all about the same amount of missing values ( around 25%), and they all related to the same attribute “reviews”. Thus, they will not influence our analysis of the relationship among other factors and overall review scores.</p>

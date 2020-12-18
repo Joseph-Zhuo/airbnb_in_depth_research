@@ -1,3 +1,5 @@
 # Interactive component
 
 
+One of our goals is to find how Airbnb properties distribution in the New York Metropolitan area changed over the years. An interactive bar chart can vividly illustrate the expansion and attractiveness of Airbnb. [Link](https://vizhub.com/ZhiyiChen-shuai/0b5df8c5bda74bfaab2190510d78e89b?edit=files&file=styles.css&line&mode=full#L30)
+
